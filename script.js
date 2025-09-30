@@ -8,7 +8,12 @@
 // Hint: You'll need the form, all inputs, error messages, success message, and submit button
 
 const form = document.querySelector('form');
-const input = document.querySelectorAll('input');
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+const queryRadios = document.querySelectorAll('input[name="query"]');
+const consentCheckbox = document.getElementById('consent')
 const firstNameError = document.getElementById('firstName-error');
 const lastNameError = document.getElementById('lastName-error');
 const emailFormatError = document.getElementById('email-format-error');
@@ -16,9 +21,11 @@ const emailRequiredError = document.getElementById('email-required-error');
 const queryTypeError = document.getElementById('queryType-error');
 const messageError = document.getElementById('message-error');
 const consentError = document.getElementById('consent-error');
-const successMessage = document.getElementById('success - message');
+const submitButton = document.getElementById('submitBtn');
+const successMessage = document.getElementById('success-message');
 
-
+console.log(firstNameInput);
+console.log(successMessage);
 // TODO: Select first name input and its error message
 
 
