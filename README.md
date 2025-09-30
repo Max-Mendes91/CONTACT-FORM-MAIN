@@ -1,100 +1,151 @@
-# Frontend Mentor - Contact form
+# Contact Form - Frontend Mentor Challenge
 
-![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)
+A responsive contact form with comprehensive validation, built as part of a Frontend Mentor challenge. Features real-time validation, accessibility support, and a clean, modern design.
 
-## Welcome! 👋
+![Contact Form Preview](./design/desktop-preview.jpg)
 
-Thanks for checking out this front-end coding challenge.
+## 🚀 Features
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+- **Form Validation**
+  - Required field validation
+  - Email format validation
+  - Radio button selection validation
+  - Consent checkbox validation
+  
+- **User Experience**
+  - Success toast message on submission
+  - Real-time error messages
+  - Smooth hover and focus states
+  - Fully keyboard accessible
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+- **Accessibility**
+  - ARIA labels and descriptions
+  - Screen reader announcements
+  - Semantic HTML structure
+  - Keyboard navigation support
 
-## The challenge
+- **Responsive Design**
+  - Mobile-first approach
+  - Optimized for all screen sizes
+  - Clean, modern interface
 
-Your challenge is to build out this contact form and get it looking as close to the design as possible. Pay particular attention to making this form accessible. Building accessible forms is a key skill for front-end developers. So this is a perfect challenge to practice.
+## 🛠️ Built With
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+- **HTML5** - Semantic markup
+- **Tailwind CSS** - Utility-first styling
+- **Vanilla JavaScript** - Form validation and interactivity
+- **Karla Font** - Google Fonts
 
-Your users should be able to: 
+## 📋 Challenge Requirements
 
-- Complete the form and see a success toast message upon successful submission
-- Receive form validation messages if:
+Users should be able to:
+
+- ✅ Complete the form and see a success toast message upon successful submission
+- ✅ Receive form validation messages if:
   - A required field has been missed
   - The email address is not formatted correctly
-- Complete the form only using their keyboard
-- Have inputs, error messages, and the success message announced on their screen reader
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- ✅ Complete the form only using their keyboard
+- ✅ Have inputs, error messages, and the success message announced on their screen reader
+- ✅ View the optimal layout for the interface depending on their device's screen size
+- ✅ See hover and focus states for all interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+## 🎨 Color Palette
 
-## Where to find everything
+### Primary
+- Green 200 (lighter): `hsl(148, 38%, 91%)`
+- Green 600 (medium): `hsl(169, 82%, 27%)`
+- Red: `hsl(0, 66%, 54%)`
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Neutral
+- White: `hsl(0, 0%, 100%)`
+- Grey 500 (medium): `hsl(186, 15%, 59%)`
+- Grey 900 (darker): `hsl(187, 24%, 22%)`
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## 📁 Project Structure
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+```
+contact-form-main/
+├── index.html          # Main HTML file
+├── script.js           # Form validation logic
+├── assets/
+│   └── images/         # Images and icons
+├── design/             # Design files from Frontend Mentor
+└── README.md           # This file
+```
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+## 🚦 Getting Started
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Max-Mendes91/CONTACT-FORM-MAIN.git
+   ```
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+2. **Navigate to the project folder**
+   ```bash
+   cd CONTACT-FORM-MAIN
+   ```
 
-## Building your project
+3. **Open in your browser**
+   ```bash
+   open index.html
+   ```
+   Or simply drag `index.html` into your browser.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## 💻 Development
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+The project uses vanilla JavaScript for form validation. No build process or dependencies required!
 
-## Deploying your project
+### Key JavaScript Features:
+- Individual field validation functions
+- Real-time error display/hide
+- Email regex validation
+- Radio button group validation
+- Form reset after successful submission
+- Accessibility-focused error handling
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+## 📱 Screenshots
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### Desktop View
+![Desktop View](./design/desktop-design.jpg)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Mobile View
+![Mobile View](./design/mobile-design.jpg)
 
-## Create a custom `README.md`
+### Active States
+![Active States](./design/active-states.jpg)
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## 🎯 Learning Outcomes
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+This project helped me practice:
+- Form validation techniques
+- Accessibility best practices (ARIA attributes)
+- Tailwind CSS utility classes
+- DOM manipulation with vanilla JavaScript
+- Responsive design principles
+- Semantic HTML structure
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+## 🔗 Links
 
-## Submitting your solution
+- [Live Demo](#) *(Add your live demo link here)*
+- [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj)
+- [My Frontend Mentor Profile](https://www.frontendmentor.io/profile/Max-Mendes91)
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## 👤 Author
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+**Max Mendes**
 
-## Sharing your solution
+- GitHub: [@Max-Mendes91](https://github.com/Max-Mendes91)
+- Frontend Mentor: [@Max-Mendes91](https://www.frontendmentor.io/profile/Max-Mendes91)
 
-There are multiple places you can share your solution:
+## 📝 License
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+This project is open source and available under the [MIT License](LICENSE).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## 🙏 Acknowledgments
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- Challenge by [Frontend Mentor](https://www.frontendmentor.io)
+- Font by [Google Fonts](https://fonts.google.com/)
 
-## Got feedback for us?
+---
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+⭐ If you found this project helpful, please give it a star!
