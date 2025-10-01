@@ -29,12 +29,22 @@
 </head>
 
 <body class="bg-green-light min-h-screen flex items-center justify-center p-4 font-karla">
+  <!-- Success Message -->
+
 
   <div class="bg-white rounded-2xl p-8 max-w-2xl w-full shadow-lg">
     <h1 class="text-3xl font-bold text-grey-dark mb-8">Contact Us</h1>
 
-    <form class="space-y-6">
 
+
+
+
+
+    <form class="space-y-6">
+      <div id="success-message" class="hidden mt-6 bg-grey-dark text-white p-6 rounded-lg absolute top-1 left-1/2 transform -translate-x-1/2">
+        <p class="font-bold mb-2">Message Sent!</p>
+        <p class="text-sm">Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         <!-- FIRST NAME INPUT -->
@@ -79,20 +89,21 @@
       <div>
         <label class="block text-sm text-grey-dark mb-2">Query Type <span class="text-green-medium">*</span></label>
 
+        <div id="query-group" class="transition-all rounded-lg">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label for="generalEnquiry"
+              class="flex items-center px-4 py-3 border border-grey-medium rounded-lg cursor-pointer hover:border-green-medium transition">
+              <input id="generalEnquiry" type="radio" name="query" class="mr-3 accent-green-medium">
+              <span tabindex="-1" class="text-grey-dark">General Enquiry</span>
+            </label>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <label for="generalEnquiry"
-            class="flex items-center px-4 py-3 border border-grey-medium rounded-lg cursor-pointer hover:border-green-medium transition">
-            <input id="generalEnquiry" type="radio" name="query" class="mr-3 accent-green-medium">
-            <span class="text-grey-dark">General Enquiry</span>
-          </label>
-
-          <!-- SUPPORT REQUEST LABEL AND QUERY -->
-          <label for="supportRequest"
-            class="flex items-center px-4 py-3 border border-grey-medium rounded-lg cursor-pointer hover:border-green-medium transition">
-            <input id="supportRequest" type="radio" name="query" class="mr-3 accent-green-medium">
-            <span class="text-grey-dark">Support Request</span>
-          </label>
+            <!-- SUPPORT REQUEST LABEL AND QUERY -->
+            <label for="supportRequest"
+              class="flex items-center px-4 py-3 border border-grey-medium rounded-lg cursor-pointer hover:border-green-medium transition">
+              <input id="supportRequest" type="radio" name="query" class="mr-3 accent-green-medium">
+              <span tabindex="-1" class="text-grey-dark">Support Request</span>
+            </label>
+          </div>
         </div>
 
         <!-- Query Type ERROR-->
@@ -113,8 +124,8 @@
       <!-- CONSENT INPUT -->
       <div>
         <label for="consent" class="flex items-start cursor-pointer">
-          <input type="checkbox" class="mt-1 mr-3 accent-green-medium">
-          <span id="consent" class="text-grey-dark text-sm">I consent to being contacted by the team<span
+          <input type="checkbox" id="consent" class="mt-1 mr-3 accent-green-medium">
+          <span class="text-grey-dark text-sm">I consent to being contacted by the team<span
               class="text-green-medium">*</span>
           </span>
         </label>
@@ -132,20 +143,15 @@
       </button>
     </form>
 
-    <!-- Success Message -->
-    <div id="success-message" class="hidden mt-6 bg-grey-dark text-white p-6 rounded-lg">
-      <p class="font-bold mb-2">Message Sent!</p>
-      <p class="text-sm">Thanks for completing the form. We'll be in touch soon!</p>
-    </div>
-  </div>
 
-  <footer class="attribution hidden lg:block lg:absolute lg:bottom-4 text-center text-sm text-grey-dark">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
-      class="text-green-medium hover:underline">Frontend Mentor</a>.
-    Coded by <a href="#" class="text-green-medium hover:underline">Max Mendes</a>.
-  </footer>
 
-  <script src="script2.js"></script>
+    <footer class="attribution hidden lg:block lg:absolute lg:bottom-4 text-center text-sm text-grey-dark">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+        class="text-green-medium hover:underline">Frontend Mentor</a>.
+      Coded by <a href="#" class="text-green-medium hover:underline">Max Mendes</a>.
+    </footer>
+
+    <script src="script2.js"></script>
 </body>
 
 </html>

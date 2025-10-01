@@ -72,49 +72,33 @@ function isRadioSelected(radioButtons) {
 // 3. ERROR DISPLAY FUNCTIONS
 // ========================================
 
-/**
- * Shows error message for a field
- * @param {HTMLElement} errorElement - The error message element
- * @param {HTMLElement} inputElement - The input element (optional, for border styling)
- */
+// Shows error message for a field
 function showError(errorElement, inputElement = null) {
     // TODO: Remove 'hidden' class from error element
+    // Hint: Add 'border-red' and remove 'border-grey-medium' classes
+    // TODO: Set aria-invalid="true" on input for screen readers
+    // TODO: Add red border to input element if provid
     errorElement.classList.remove('hidden');
-    // TODO: Add red border to input element if provided
+    ed
     if (inputElement) {
         inputElement.classList.remove('border-grey-medium');
         inputElement.classList.add('border-red');
         inputElement.setAttribute('aria-invalid', 'true');
     }
-    // Hint: Add 'border-red' and remove 'border-grey-medium' classes
-    // TODO: Set aria-invalid="true" on input for screen readers
 }
-// console.log('BEFORE:', firstNameInput.classList);
-// showError(firstNameError, firstNameInput);
-// console.log('AFTER:', firstNameInput.classList);
-
-
-/**
- * Hides error message for a field
- * @param {HTMLElement} errorElement - The error message element
- * @param {HTMLElement} inputElement - The input element (optional, for border styling)
- */
+//  Hides error message for a field
 function hideError(errorElement, inputElement = null) {
     // TODO: Add 'hidden' class to error element
+    // TODO: Remove red border from input element if provided
+    // Hint: Remove 'border-red' and add back 'border-grey-medium' classes
+    // TODO: Set aria-invalid="false" on input for screen readers
     errorElement.classList.add('hidden');
     if (inputElement) {
         inputElement.classList.remove('border-red');
         inputElement.classList.add('border-grey-medium');
         inputElement.setAttribute('aria-invalid', 'false');
     }
-    // TODO: Remove red border from input element if provided
-    // Hint: Remove 'border-red' and add back 'border-grey-medium' classes
-    // TODO: Set aria-invalid="false" on input for screen readers
 }
-console.log('BEFORE:', firstNameInput.classList);
-hideError(firstNameError, firstNameInput);
-console.log('AFTER:', firstNameInput.classList);
-
 // ========================================
 // 4. INDIVIDUAL FIELD VALIDATION
 // ========================================
@@ -125,10 +109,11 @@ console.log('AFTER:', firstNameInput.classList);
  */
 function validateFirstName() {
     // TODO: Get the value from first name input
-    const inputValue = firstNameInput.value
     // TODO: Check if field is empty using isFieldEmpty()
     // TODO: If empty, show error and return false
     // TODO: If valid, hide error and return true
+    const inputValue = firstNameInput.value
+
     if (isFieldEmpty(inputValue)) {
         showError(firstNameError, firstNameInput)
         return false;
@@ -138,10 +123,7 @@ function validateFirstName() {
     }
 }
 
-/**
- * Validates the last name field
- * @returns {boolean} - True if valid, false otherwise
- */
+// Validates the last name field
 function validateLastName() {
     // TODO: Implement same logic as validateFirstName for last name
 }
