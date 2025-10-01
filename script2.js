@@ -1,12 +1,3 @@
-// Contact Form Validation Script
-// This script handles form validation, submission, and accessibility features
-
-// ========================================
-// 1. DOM ELEMENT SELECTION
-// ========================================
-// TODO: Select all necessary DOM elements
-// Hint: You'll need the form, all inputs, error messages, success message, and submit button
-
 const form = document.querySelector('form');
 const firstNameInput = document.getElementById('firstName');
 const lastNameInput = document.getElementById('lastName');
@@ -24,9 +15,10 @@ const consentError = document.getElementById('consent-error');
 const submitButton = document.getElementById('submitBtn');
 const successMessage = document.getElementById('success-message');
 
-// ========================================
-// 2. VALIDATION FUNCTIONS
-// ========================================
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(validateFirstName());
+});
 
 /**
  * Validates if a field is not empty
@@ -52,7 +44,7 @@ function isValidEmail(email) {
     // Hint: Basic pattern - something@something.something
     // Example regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 }
-// console.log(isValidEmail('test@test.com'));
+
 
 /**
  * Validates if at least one radio button is selected
@@ -65,7 +57,7 @@ function isRadioSelected(radioButtons) {
 
     return Array.from(radioButtons).some(radio => radio.checked);
 }
-// console.log(isRadioSelected(queryRadios));
+
 
 
 // ========================================
@@ -89,9 +81,7 @@ function showError(errorElement, inputElement = null) {
     // Hint: Add 'border-red' and remove 'border-grey-medium' classes
     // TODO: Set aria-invalid="true" on input for screen readers
 }
-// console.log('BEFORE:', firstNameInput.classList);
-// showError(firstNameError, firstNameInput);
-// console.log('AFTER:', firstNameInput.classList);
+
 
 
 /**
@@ -111,9 +101,6 @@ function hideError(errorElement, inputElement = null) {
     // Hint: Remove 'border-red' and add back 'border-grey-medium' classes
     // TODO: Set aria-invalid="false" on input for screen readers
 }
-console.log('BEFORE:', firstNameInput.classList);
-hideError(firstNameError, firstNameInput);
-console.log('AFTER:', firstNameInput.classList);
 
 // ========================================
 // 4. INDIVIDUAL FIELD VALIDATION
@@ -138,10 +125,10 @@ function validateFirstName() {
     }
 }
 
-/**
- * Validates the last name field
- * @returns {boolean} - True if valid, false otherwise
- */
+
+//  * Validates the last name field
+//  * @returns {boolean} - True if valid, false otherwise
+//  */
 function validateLastName() {
     // TODO: Implement same logic as validateFirstName for last name
 }
