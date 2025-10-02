@@ -128,10 +128,7 @@ function validateQueryType() {
         return false;
     }
 }
-/**
- * Validates the consent checkbox
- * @returns {boolean} - True if valid, false otherwise
- */
+// Validates the consent checkbox
 function validateConsent() {
     // TODO: Get the consent checkbox
     // TODO: Check if it's checked
@@ -168,7 +165,6 @@ function validateForm() {
 
 
 // Shows success message
-
 function showSuccessMessage() {
     // TODO: Remove 'hidden' class from success message
     // TODO: Set focus to success message for screen readers
@@ -181,32 +177,29 @@ function showSuccessMessage() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // scrolls to top
 }
 
-/**
- * Resets the form
- */
+//Resets the form
+
 function resetForm() {
     // TODO: Call form.reset() to clear all inputs
-    form.reset();
     // TODO: Hide all error messages
+    // Hint: Loop through all error elements and call hideError()
+    form.reset();
     const errors = [firstNameError, lastNameError, emailFormatError, emailRequiredError, queryTypeError, messageError, consentError];
     errors.forEach(error => hideError(error));
-
-    // Hint: Loop through all error elements and call hideError()
 }
 
 //  Handles form submission
-
 function handleSubmit(e) {
     e.preventDefault();
 
     if (validateForm()) {
-        
+
         successMessage.classList.remove('hidden');
         successMessage.setAttribute('tabindex', '-1');
         successMessage.focus();
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        
+
         setTimeout(() => {
             form.reset();
             hideAllErrors();
