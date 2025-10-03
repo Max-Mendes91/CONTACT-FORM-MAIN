@@ -21,13 +21,12 @@ const successMessage = document.getElementById('success-message');
 // Validates if a field is not empty 
 function isFieldEmpty(value) {
     // TODO: Check if value is empty or only whitespace
-    // Hint: Use trim() method
     return value.trim() === "";
 }
 //  Validates email format
 function isValidEmail(email) {
     // TODO: Use regex to validate email format
-    // Hint: Basic pattern - something@something.something
+    
     // Example regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -36,7 +35,7 @@ function isValidEmail(email) {
 // Validates if at least one radio button is selected
 function isRadioSelected(radioButtons) {
     // TODO: Loop through radio buttons and check if any is checked
-    // Hint: Use Array.from() or spread operator with .some()
+    
     return Array.from(radioButtons).some(radio => radio.checked);
 }
 
@@ -46,7 +45,7 @@ function isRadioSelected(radioButtons) {
 function showError(errorElement, inputElement = null) {
     // TODO: Remove 'hidden' class from error element
     // TODO: Add red border to input element if provided
-    // Hint: Add 'border-red' and remove 'border-grey-medium' classes
+    // Add 'border-red' and remove 'border-grey-medium' classes
     // TODO: Set aria-invalid="true" on input for screen readers
     errorElement.classList.remove('hidden');
     if (inputElement) {
@@ -60,7 +59,7 @@ function showError(errorElement, inputElement = null) {
 function hideError(errorElement, inputElement = null) {
     // TODO: Add 'hidden' class to error element
     // TODO: Remove red border from input element if provided
-    // Hint: Remove 'border-red' and add back 'border-grey-medium' classes
+    // Remove 'border-red' and add back 'border-grey-medium' classes
     // TODO: Set aria-invalid="false" on input for screen readers
     errorElement.classList.add('hidden');
     if (inputElement) {
@@ -150,7 +149,7 @@ function validateConsent() {
 function validateForm() {
     // TODO: Call all validation functions and store results
     // TODO: Return true only if ALL validations pass
-    // Hint: Use && operator or array with .every()
+    // Use && operator or array with .every()
     const functionsValidation = [
         validateField(firstNameInput, firstNameError),
         validateField(lastNameInput, lastNameError),
@@ -168,9 +167,9 @@ function validateForm() {
 function showSuccessMessage() {
     // TODO: Remove 'hidden' class from success message
     // TODO: Set focus to success message for screen readers
-    // Hint: Add tabindex="-1" and call .focus()
+    //  Add tabindex="-1" and call .focus()
     // TODO: Scroll to top of page to show success message
-    // Hint: window.scrollTo(0, 0)
+    //  window.scrollTo(0, 0)
     successMessage.classList.remove('hidden');
     successMessage.setAttribute('tabindex', '-1');
     successMessage.focus();
@@ -182,7 +181,7 @@ function showSuccessMessage() {
 function resetForm() {
     // TODO: Call form.reset() to clear all inputs
     // TODO: Hide all error messages
-    // Hint: Loop through all error elements and call hideError()
+    // Loop through all error elements and call hideError()
     form.reset();
     const errors = [firstNameError, lastNameError, emailFormatError, emailRequiredError, queryTypeError, messageError, consentError];
     errors.forEach(error => hideError(error));
