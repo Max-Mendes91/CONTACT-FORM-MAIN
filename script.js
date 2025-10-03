@@ -26,7 +26,7 @@ function isFieldEmpty(value) {
 //  Validates email format
 function isValidEmail(email) {
     // TODO: Use regex to validate email format
-    
+
     // Example regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -35,7 +35,7 @@ function isValidEmail(email) {
 // Validates if at least one radio button is selected
 function isRadioSelected(radioButtons) {
     // TODO: Loop through radio buttons and check if any is checked
-    
+
     return Array.from(radioButtons).some(radio => radio.checked);
 }
 
@@ -173,7 +173,8 @@ function showSuccessMessage() {
     successMessage.classList.remove('hidden');
     successMessage.setAttribute('tabindex', '-1');
     successMessage.focus();
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scrolls to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
 }
 
 //Resets the form
