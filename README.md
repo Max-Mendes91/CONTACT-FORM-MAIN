@@ -111,8 +111,6 @@ The project uses vanilla JavaScript for form validation. No build process or dep
 ### Mobile View
 ![Mobile View](./design/mobile-design.jpg)
 
-### Active States
-![Active States](./design/active-states.jpg)
 
 ## 🎯 Learning Outcomes
 
