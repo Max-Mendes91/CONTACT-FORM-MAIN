@@ -8,38 +8,23 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Contact form</title>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'green-light': 'hsl(148, 38%, 91%)',
-            'green-medium': 'hsl(169, 82%, 27%)',
-            'red': 'hsl(0, 66%, 54%)',
-            'grey-medium': 'hsl(186, 15%, 59%)',
-            'grey-dark': 'hsl(187, 24%, 22%)'
-          },
-          fontFamily: {
-            'karla': ['Karla', 'sans-serif']
-          }
-        }
-      }
+  <style>
+    body {
+      font-family: 'Karla', sans-serif;
     }
-  </script>
+  </style>
 </head>
 
-<body class="bg-green-light min-h-screen flex items-center justify-center p-4 font-karla">
-
-
+<body class="min-h-screen flex items-center justify-center p-4" style="background-color: hsl(148, 38%, 91%);">
 
   <div class="bg-white rounded-2xl p-8 max-w-2xl w-full shadow-lg">
-    <h1 class="text-3xl font-bold text-grey-dark mb-8">Contact Us</h1>
-
+    <h1 class="text-3xl font-bold mb-8" style="color: hsl(187, 24%, 22%);">Contact Us</h1>
 
     <form class="space-y-6">
       <!-- Success Message -->
       <div id="success-message"
-        class=" hidden mt-6 bg-grey-dark text-white p-6 rounded-lg absolute top-1 left-1/2 transform -translate-x-1/2">
+        class="hidden mt-6 text-white p-6 rounded-lg absolute top-1 left-1/2 transform -translate-x-1/2"
+        style="background-color: hsl(187, 24%, 22%);">
         <div class="flex items-center mb-2">
           <img src="./assets/images/icon-success-check.svg" alt="Success" class="w-5 h-5 mr-2" />
           <p class="font-bold">Message Sent!</p>
@@ -47,116 +32,118 @@
         <p class="text-sm">Thanks for completing the form. We'll be in touch soon!</p>
       </div>
 
-
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
         <!-- FIRST NAME INPUT -->
         <div>
-          <label for="firstName" class="block text-sm text-grey-dark mb-2">First Name <span
-              class="text-green-medium">*</span></label>
-          <input type="text" id="firstName"
-            class="w-full px-4 py-3 border border-grey-medium rounded-lg focus:outline-none focus:border-green-medium hover:border-green-medium transition">
-
-          <!-- First Name ERROR-->
-          <div id="firstName-error" class="hidden text-red text-sm mt-1">This field is required</div>
+          <label for="firstName" class="block text-sm mb-2" style="color: hsl(187, 24%, 22%);">
+            First Name <span style="color: hsl(169, 82%, 27%);">*</span>
+          </label>
+          <input type="text" id="firstName" class="w-full px-4 py-3 border rounded-lg focus:outline-none transition"
+            style="border-color: hsl(186, 15%, 59%);">
+          <div id="firstName-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+            This field is required
+          </div>
         </div>
-
 
         <!-- LAST NAME INPUT -->
         <div>
-          <label for="lastName" class="block text-sm text-grey-dark mb-2">Last Name <span
-              class="text-green-medium">*</span></label>
-          <input id="lastName" type="text"
-            class="w-full px-4 py-3 border border-grey-medium rounded-lg focus:outline-none focus:border-green-medium hover:border-green-medium transition">
-
-
-          <!-- Last Name ERROR-->
-          <div id="lastName-error" class="hidden text-red text-sm mt-1">This field is required</div>
+          <label for="lastName" class="block text-sm mb-2" style="color: hsl(187, 24%, 22%);">
+            Last Name <span style="color: hsl(169, 82%, 27%);">*</span>
+          </label>
+          <input id="lastName" type="text" class="w-full px-4 py-3 border rounded-lg focus:outline-none transition"
+            style="border-color: hsl(186, 15%, 59%);">
+          <div id="lastName-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+            This field is required
+          </div>
         </div>
       </div>
 
       <!-- EMAIL INPUT -->
       <div>
-        <label for="email" class="block text-sm text-grey-dark mb-2">Email Address <span
-            class="text-green-medium">*</span></label>
-        <input type="email" id="email"
-          class="w-full px-4 py-3 border border-grey-medium rounded-lg focus:outline-none focus:border-green-medium hover:border-green-medium transition">
-
-
-        <!-- Email ERROR messages -->
-        <div id="email-format-error" class="hidden text-red text-sm mt-1">Please enter a valid email address</div>
-        <div id="email-required-error" class="hidden text-red text-sm mt-1">This field is required</div>
+        <label for="email" class="block text-sm mb-2" style="color: hsl(187, 24%, 22%);">
+          Email Address <span style="color: hsl(169, 82%, 27%);">*</span>
+        </label>
+        <input type="email" id="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none transition"
+          style="border-color: hsl(186, 15%, 59%);">
+        <div id="email-format-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+          Please enter a valid email address
+        </div>
+        <div id="email-required-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+          This field is required
+        </div>
       </div>
 
       <!-- QUERY INPUT AND LABEL -->
       <div>
-        <label class="block text-sm text-grey-dark mb-2">Query Type <span class="text-green-medium">*</span></label>
-
+        <label class="block text-sm mb-2" style="color: hsl(187, 24%, 22%);">
+          Query Type <span style="color: hsl(169, 82%, 27%);">*</span>
+        </label>
         <div id="query-group" class="transition-all rounded-lg">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <label for="generalEnquiry"
-              class="flex items-center px-4 py-3 border border-grey-medium rounded-lg cursor-pointer hover:border-green-medium transition">
-              <input id="generalEnquiry" type="radio" name="query" class="mr-3 accent-green-medium">
-              <span tabindex="-1" class="text-grey-dark">General Enquiry</span>
+            <label for="generalEnquiry" class="flex items-center px-4 py-3 border rounded-lg cursor-pointer transition"
+              style="border-color: hsl(186, 15%, 59%);">
+              <input id="generalEnquiry" type="radio" name="query" class="mr-3"
+                style="accent-color: hsl(169, 82%, 27%);">
+              <span tabindex="-1" style="color: hsl(187, 24%, 22%);">General Enquiry</span>
             </label>
 
-            <!-- SUPPORT REQUEST LABEL AND QUERY -->
-            <label for="supportRequest"
-              class="flex items-center px-4 py-3 border border-grey-medium rounded-lg cursor-pointer hover:border-green-medium transition">
-              <input id="supportRequest" type="radio" name="query" class="mr-3 accent-green-medium">
-              <span tabindex="-1" class="text-grey-dark">Support Request</span>
+            <label for="supportRequest" class="flex items-center px-4 py-3 border rounded-lg cursor-pointer transition"
+              style="border-color: hsl(186, 15%, 59%);">
+              <input id="supportRequest" type="radio" name="query" class="mr-3"
+                style="accent-color: hsl(169, 82%, 27%);">
+              <span tabindex="-1" style="color: hsl(187, 24%, 22%);">Support Request</span>
             </label>
           </div>
         </div>
-
-        <!-- Query Type ERROR-->
-        <div id="queryType-error" class="hidden text-red text-sm mt-1">Please select a query type</div>
+        <div id="queryType-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+          Please select a query type
+        </div>
       </div>
 
       <!-- MESSAGE TEXTAREA -->
       <div>
-        <label for="message" class="block text-sm text-grey-dark mb-2">Message <span
-            class="text-green-medium">*</span></label>
+        <label for="message" class="block text-sm mb-2" style="color: hsl(187, 24%, 22%);">
+          Message <span style="color: hsl(169, 82%, 27%);">*</span>
+        </label>
         <textarea rows="4" id="message"
-          class="w-full px-4 py-3 border border-grey-medium rounded-lg focus:outline-none focus:border-green-medium hover:border-green-medium transition resize-none"></textarea>
-
-        <!-- Message ERROR-->
-        <p id="message-error" class="hidden text-red text-sm mt-1">This field is required</p>
+          class="w-full px-4 py-3 border rounded-lg focus:outline-none transition resize-none"
+          style="border-color: hsl(186, 15%, 59%);"></textarea>
+        <p id="message-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+          This field is required
+        </p>
       </div>
 
       <!-- CONSENT INPUT -->
       <div>
         <label for="consent" class="flex items-start cursor-pointer">
-          <input type="checkbox" id="consent" class="mt-1 mr-3 accent-green-medium">
-          <span class="text-grey-dark text-sm">I consent to being contacted by the team<span
-              class="text-green-medium">*</span>
+          <input type="checkbox" id="consent" class="mt-1 mr-3" style="accent-color: hsl(169, 82%, 27%);">
+          <span class="text-sm" style="color: hsl(187, 24%, 22%);">
+            I consent to being contacted by the team
+            <span style="color: hsl(169, 82%, 27%);">*</span>
           </span>
         </label>
-
-        <!-- Consent ERROR-->
-        <div id="consent-error" class="hidden text-red text-sm mt-1">To submit this form, please consent to being
-          contacted
+        <div id="consent-error" class="hidden text-sm mt-1" style="color: hsl(0, 66%, 54%);">
+          To submit this form, please consent to being contacted
         </div>
       </div>
 
       <!-- BUTTON SUBMIT -->
       <button id="submitBtn" type="submit"
-        class="w-full bg-green-medium hover:bg-green-dark text-white font-bold py-4 rounded-lg transition">
+        class="w-full text-white font-bold py-4 rounded-lg transition hover:opacity-90"
+        style="background-color: hsl(169, 82%, 27%);">
         Submit
       </button>
     </form>
 
-
-
-    <footer class="attribution hidden lg:block lg:absolute lg:bottom-4 text-center text-sm text-grey-dark">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
-        class="text-green-medium hover:underline">Frontend Mentor</a>.
-      Coded by <a href="#" class="text-green-medium hover:underline">Max Mendes</a>.
+    <footer class="hidden lg:block lg:absolute lg:bottom-4 text-center text-sm" style="color: hsl(187, 24%, 22%);">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="hover:underline"
+        style="color: hsl(169, 82%, 27%);">Frontend Mentor</a>.
+      Coded by <a href="#" class="hover:underline" style="color: hsl(169, 82%, 27%);">Max Mendes</a>.
     </footer>
 
-
   </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
